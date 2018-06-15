@@ -1,0 +1,19 @@
+{
+  "name": "hotel-booking-system",
+  "version": "1.0.0",
+  "description": "A sample hotel booking system backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushs08/hotel-booking-system.git"
+  },
+  "author": "Ayush Sindhwani",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ayushs08/hotel-booking-system/issues"
+  },
+  "homepage": "https://github.com/ayushs08/hotel-booking-system#readme"
+}
