@@ -16,27 +16,28 @@ const BookingSchema = new Schema({
         required: [true, 'Check out date is required']
     },
     amount: {
-        type: number,
+        type: Number,
         required: [true, 'Total amount is required']
     },
     guests: {
-        type: number,
+        type: Number,
         required: [true, 'Number of guests is required']
     },
     nights: {
-        type: number,
+        type: Number,
         required: [true, 'Number of nights is required']
     },
     adults: {
-        type: number
+        type: Number
     },
     children: {
-        type: number
+        type: Number,
+        default: 0
     },
-    createdBy: [{
-        type: mongoose.Schema.Types._id,
-        ref: 'User'
-    }],
+    // createdBy: [{
+    //     type: mongoose.Schema.Types._id,
+    //     ref: 'User'
+    // }],
     dateCreated: {
         type: Date,
         default: Date.now

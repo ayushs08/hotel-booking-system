@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 // create room Schema and model
 const RoomSchema = new Schema({
     number: {
-        type: number,
+        type: String,
         required: [true, 'Room number is required']
     },
     type: {
@@ -12,11 +12,11 @@ const RoomSchema = new Schema({
         required: [true, 'Please specify room type']
     },
     pricePerNight: {
-        type: number,
+        type: Number,
         required: [true, 'Please specify price per night']
     },
     maxGuest: {
-        type: number,
+        type: Number,
         required: [true, 'Please specify maximum number of guests allowed']
     },
     dateCreated: {

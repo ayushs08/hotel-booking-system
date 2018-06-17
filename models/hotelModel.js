@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const room = require('./roomModel');
+const Room = require('./roomModel');
 
 // create hotel Schema and model
 const HotelSchema = new Schema({
@@ -9,12 +9,8 @@ const HotelSchema = new Schema({
         type: String,
         required: [true, 'Hotel name is required']
     },
-    rooms: [{
-        type: mongoose.Schema.Types.number,
-        ref: 'Room'
-    }],
     stars: {
-        type: number
+        type: Number
     },
     dateCreated: {
         type: Date,
