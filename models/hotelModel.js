@@ -15,7 +15,8 @@ const HotelSchema = new Schema({
     dateCreated: {
         type: Date,
         default: Date.now
-    }
+    },
+    rooms: [{type: Schema.Types.Number, ref: 'Room'}]
 });
 
 const Hotel = mongoose.model('Hotel', HotelSchema);

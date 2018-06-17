@@ -7,13 +7,16 @@ const user = require('./userModel');
 
 // create booking Schema and model
 const BookingSchema = new Schema({
-    checkIn: {
-        type: Date,
-        required: [true, 'Check in date is required']
+    hotel: {
+        type: String
     },
-    checkOut: {
+    checkin: {
         type: Date,
-        required: [true, 'Check out date is required']
+        required: [true, 'Checkin date is required']
+    },
+    checkout: {
+        type: Date,
+        required: [true, 'Checkout date is required']
     },
     amount: {
         type: Number,
@@ -34,10 +37,6 @@ const BookingSchema = new Schema({
         type: Number,
         default: 0
     },
-    // createdBy: [{
-    //     type: mongoose.Schema.Types._id,
-    //     ref: 'User'
-    // }],
     dateCreated: {
         type: Date,
         default: Date.now

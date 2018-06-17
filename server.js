@@ -12,7 +12,7 @@ mongoose.Promise = global.Promise;
 app.use(bodyParser.json());
 
 // port
-const port = process.env.port || 8000;
+const port = 8000;
 
 // initialize routes
 app.use(express.Router().get('/', (req, res) => {res.send('<h1>Hotel Booking System</h1>');}));
@@ -20,6 +20,7 @@ app.use(express.Router().get('/api', (req, res) => {res.send('<h1>API System</h1
 app.use('/api', require('./routes/hotels'));
 app.use('/api', require('./routes/users'));
 app.use('/api', require('./routes/bookings'));
+app.use('/api', require('./routes/rooms'));
 
 // error handling middleware
 app.use((err, req, res, next) => {
