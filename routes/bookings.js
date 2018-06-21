@@ -5,9 +5,8 @@ const Booking = require('../models/bookingModel');
 
 // get a list of bookings from db
 router.get('/bookings', (req, res, next) => {
-    res.send({
-        type : 'GET'
-    });
+    Booking.find({hotel: req.body.hotel})
+    .then( rooms => res.send(room) );
 });
 
 // add a new booking to db

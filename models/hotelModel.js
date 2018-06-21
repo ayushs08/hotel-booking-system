@@ -16,7 +16,7 @@ const HotelSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    rooms: [{type: Schema.Types.Number, ref: 'Room'}]
+    rooms: [{type: Schema.Types.ObjectId, ref: 'Room'}]
 });
 
 const Hotel = mongoose.model('Hotel', HotelSchema);

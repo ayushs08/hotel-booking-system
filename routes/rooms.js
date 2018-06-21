@@ -2,17 +2,23 @@ const express = require('express');
 const router = express.Router();
 
 const Room = require('../models/roomModel');
+const Hotel = require('../models/hotelModel');
 
 // get a list of rooms from db
 router.get('/rooms', (req, res, next) => {
-    res.send({
-        type : 'GET'
-    });
+    Room.find({hotel: req.body.hotel})
+    .then( rooms => res.send(room) );
 });
 
 // add a new room to db
 router.post('/rooms', (req, res, next) => {
     Room.create(req.body)
+    .then( room => {
+        Hotel.find({name : req.body.hotel})
+        .then (hotels => array.forEach(element => {
+           element.rooms.push('WORKS') 
+        }))
+    })
     .then( room => {
         res.send(room);
     }).catch(next);
