@@ -7,7 +7,7 @@ const Hotel = require('../models/hotelModel');
 router.get('/hotels', (req, res, next) => {
     // Hotel.find({name: req.query.hotelName})
     // .then( hotels => res.send(hotels));
-    Hotel.find({})
+    Hotel.find({name: req.body.name})
     .populate('rooms')
     .exec( (err, hotels) => {
         if(err) { res.send({error: err.message}) }
